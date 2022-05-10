@@ -1,0 +1,134 @@
+.posts {
+    background-color: #F7F7F7;
+}
+.posts__container {
+}
+
+.posts__heading {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #2E2E2E;
+}
+.posts__hr {
+    margin-top: 16px;
+    width: 188px;
+}
+.posts__list {
+    margin-top: 23px;
+}
+.posts__item {
+}
+.posts__item-wrapper {
+
+    height: 100%;
+}
+.posts__wrapper-adenture {
+    display: none;
+    color: #FFFFFF;
+    background-color: #DD783F;
+    border-radius: 2px;
+}
+.posts__item-wrapper {
+    &:hover >  .posts__wrapper-adenture {
+        display: block;
+    }
+}
+.posts__item-img {
+}
+.posts__item-link {
+    padding-top: 157px;
+}
+.posts__item-link::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+.posts__item-link-heading {
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+.posts__item-desc {
+    margin-top: 6px;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+.posts__item-box {
+    margin-top: 17px;
+    padding: 0;
+}
+.posts__item-box-box {
+}
+.posts__item-box-box-img {
+}
+.posts__item-box-box-sp {
+    color: rgba(255, 255, 255, 0.7);
+}
+.posts__item-box-time {
+    color: rgba(255, 255, 255, 0.7);
+}
+@include breakpoint-down(970px) {
+    .posts__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .posts__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+@include breakpoint-down(510px) {
+    .posts__item {
+        max-width: 400px;
+    }
+    .posts__item-wrapper {
+        max-width: 360px;
+    }
+    .posts__item-link {
+        padding-top: 95px;
+    }
+}
+@include breakpoint-down(470px) {
+    .posts__item {
+        max-width: 340px;
+    }
+
+    .posts__item-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 300px;
+    }
+    .posts__item-link {
+        padding-top: 65px;
+    }
+    .posts__item-box {
+        width: 300px !important;
+    }
+}
+@include breakpoint-down(380px) {
+    .posts__item {
+        max-width: 260px;
+        height: 230px;
+    }
+    .posts__item-img {
+        height: 230px;
+        z-index: 12;
+    }
+    .posts__item-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 220px;
+    }
+    .posts__item-link {
+        padding-top: 40px;
+    }
+    .posts__item-box {
+        width: 220px !important;
+    }
+}
